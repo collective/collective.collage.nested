@@ -1,6 +1,29 @@
 Introduction
 ============
 
+This package enables Collage to support nested Collage objects.
+
+Additionally, two view (Collage layouts) are available:
+
+* full: displays exactly the same as a Collage default view, including
+  title, description, related items and, of course, the contents (rows 
+  and columns).
+
+* content: displays only contents (rows and columns).
+
+To allow Collage objects to be created inside columns we had to patch
+`Products.Collage.config.COLLAGE_TYPES` and remove `Collage` content type
+from it.
+
+Additionally, a CSS resource is registered (just below original the 
+`collage.css`) to display nested column widths correctly.
+
+Known issues
+============
+
+Although `COLLAGE_TYPES` is patched, Collage vocabulary
+`collage.vocabularies.CollageUserFriendlyTypes` doesn't seem to learn about
+it, so Collage control panel doesn't display `Collage` as an allowed
+portal type.
 
 
-This product may contain traces of nuts.
