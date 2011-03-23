@@ -7,7 +7,7 @@ setup(name='collective.collage.nested',
       version=version,
       description="Display a nested Collage inside Collage",
       long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read() + "\n" + 
+                       open(os.path.join("docs", "AUTHORS.txt")).read() + "\n" + 
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers

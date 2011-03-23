@@ -1,15 +1,16 @@
 Introduction
 ============
 
-This package enables Collage to support nested Collage objects.
+This package enables `Collage
+<http://pypi.python.org/pypi/Products.Collage>`_. to support nested Collage objects.
 
 Additionally, two view (Collage layouts) are available:
 
-* full: displays exactly the same as a Collage default view, including
+* **full**: displays exactly the same as a Collage default view, including
   title, description, related items and, of course, the contents (rows 
   and columns).
 
-* content: displays only contents (rows and columns).
+* **content**: displays only contents (rows and columns).
 
 To allow Collage objects to be created inside columns we had to patch
 `Products.Collage.config.COLLAGE_TYPES` and remove `Collage` content type
