@@ -6,7 +6,7 @@
   <browser:page
       name="full"
       for="Products.Collage.interfaces.ICollage"
-      class="Products.Collage.browser.collage.CollageView"
+      class="collective.collage.nested.browser.views.NestedCollageView"
       permission="zope.Public"
       template="templates/nested_full.pt"
       layer="Products.Collage.interfaces.ICollageBrowserLayer"
@@ -15,12 +15,12 @@
   <browser:page
       name="content"
       for="Products.Collage.interfaces.ICollage"
-      class="Products.Collage.browser.collage.CollageView"
+      class="collective.collage.nested.browser.views.NestedCollageView"
       permission="zope.Public"
       template="templates/nested_content.pt"
       layer="Products.Collage.interfaces.ICollageBrowserLayer"
       />
-
+      
   <browser:resource
     name="nested-collage.css"
     file="./css/collage.css"
