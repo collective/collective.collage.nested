@@ -3,26 +3,13 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:monkey="http://namespaces.plone.org/monkey"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="collective.collage.nested">
 
   <five:registerPackage package="." initialize=".initialize" />
 
 
-  <include package="collective.monkeypatcher" file="meta.zcml" />
-
-  <monkey:patch
-      description="Allows nested Collage by removing 'Collage' from COLLAGE_TYPES"
-      class="Products.Collage.config"
-      original="COLLAGE_TYPES"
-      replacement="collective.collage.nested.patch.patched_collage_types"
-      handler="collective.collage.nested.patch.apply_collage_types_patch"
-      />
-      
   <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
-
-  <i18n:registerTranslations directory="locales" />
   
   <include package=".browser" />
 
@@ -34,8 +21,18 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-
+  <include package="collective.monkeypatcher" file="meta.zcml" />
 <!--
+  <monkey:patch
+      description="Allows nested Collage by removing 'Collage' from COLLAGE_TYPES"
+      class="Products.Collage.config"
+      original="COLLAGE_TYPES"
+      replacement="collective.collage.nested.patch.patched_collage_types"
+      handler="collective.collage.nested.patch.apply_collage_types_patch"
+      />
+-->      
+
+
   <monkey:patch
       description="Allow Collage nested objects in Collage"
       class="Products.Collage.browser.controlpanel.CollageSiteOptions"
@@ -51,7 +48,6 @@
       preserveOriginal="true"
       replacement="collective.collage.nested.patch.enabledAlias"
       />
--->
 
 
 </configure>
