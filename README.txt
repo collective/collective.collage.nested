@@ -2,9 +2,9 @@ Introduction
 ============
 
 This package enables `Collage
-<http://pypi.python.org/pypi/Products.Collage>`_. to support nested Collage objects.
+<http://pypi.python.org/pypi/Products.Collage>`_ to support nested Collage objects.
 
-Additionally, two view (Collage layouts) are available:
+Additionally, two views (Collage layouts) are available:
 
 * **full**: displays exactly the same as a Collage default view, including
   title, description, related items and, of course, the contents (rows 
@@ -16,7 +16,7 @@ To allow Collage objects to be created inside columns we had to patch
 ``Products.Collage.config.COLLAGE_TYPES`` and remove `Collage` content type
 from it.
 
-Additionally, a CSS resource is registered (just below original the 
+Additionally, a CSS resource is registered (just below the original 
 ``collage.css``) to display nested column widths correctly.
 
 Usage
@@ -29,7 +29,7 @@ base your class on the new ``NestedCollageView`` one, like this::
 
     class MyNestedCollageView(NestedCollageView):
         """ A custom view for a nested collage """
-    ...
+        ...
 
 
 Known issues
