@@ -20,9 +20,15 @@
           </p>
         </tal:description>
 
+        <tal:context define="wtool here/portal_workflow;
+                             isViewTemplate python:True;
+                             plone_view here/@@plone;
+                             putils here/plone_utils;
+                             normalizeString nocall:putils/normalizeString">
         <div metal:use-macro="here/document_relateditems/macros/relatedItems">
           show related items if they exist
         </div>
+        </tal:context>
 
         <div tal:replace="structure here/@@renderer">
           Nested Collage content

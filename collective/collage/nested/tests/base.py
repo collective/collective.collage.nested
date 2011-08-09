@@ -164,9 +164,9 @@ class FunctionalTestCaseWithContent(FunctionalTestCase):
         _ = collage.invokeFactory('CollageRow', '1')
         row = getattr(collage, _)
         _ = row.invokeFactory('CollageColumn', '1')
-#        column = getattr(row, _)
+        column = getattr(row, _)
 
         # Alias for inner Collage
-#       _ = column.invokeFactory('CollageAlias', 'alias')
-#        alias = getattr(column, _)
-#        alias.set_target(ni.UID())
+        _ = column.invokeFactory('CollageAlias', 'alias')
+        alias = getattr(column, _)
+        alias.set_target(self.icollage.UID())

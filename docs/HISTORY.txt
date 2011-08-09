@@ -1,9 +1,17 @@
 Changelog
 =========
 
-1.0dev (unreleased)
+1.0 (2011-08-09)
+----------------
+- i18n support
+- English and Spanish translation
+- Full layout now displays related items
+- Full test
+
+1.0dev (2011-03-24)
 -------------------
 
 - Initial release
-- Patch in Products.Collage.config.COLLAGE_TYPES
-- 2 views to support nested Collage
+- Patches for Products.Collage.browser.controlpanel.CollageSiteOptions
+  enabledType and enabledAlias
+- 2 views to support nested Collage: full and content

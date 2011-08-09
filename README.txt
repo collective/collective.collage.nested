@@ -6,15 +6,16 @@ This package enables `Collage
 
 Additionally, two views (Collage layouts) are available:
 
-* **full**: displays exactly the same as a Collage default view, including
+* **Full**: displays exactly the same as a Collage default view, including
   title, description, related items and, of course, the contents (rows 
   and columns).
 
-* **content**: displays only contents (rows and columns).
+* **Content**: displays only contents (rows and columns).
 
 To allow Collage objects to be created inside columns we had to patch
-``Products.Collage.config.COLLAGE_TYPES`` and remove `Collage` content type
-from it.
+``enabledType`` and ``enabledAlias`` methods in 
+``Products.Collage.browser.controlpanel.CollageSiteOptions``
+to allow `Collage` content type to be inserted in a ``Column``.
 
 Additionally, a CSS resource is registered (just below the original 
 ``collage.css``) to display nested column widths correctly.
@@ -35,9 +36,8 @@ base your class on the new ``NestedCollageView`` one, like this::
 Known issues
 ============
 
-Although ``COLLAGE_TYPES`` is patched, Collage vocabulary
-``collage.vocabularies.CollageUserFriendlyTypes`` doesn't seem to learn about
-it, so Collage control panel doesn't display ``Collage`` as an allowed
-portal type.
-
+Ideally ``Products.Collage.config.COLLAGE_TYPES`` should be patched 
+however ``collage.vocabularies.CollageUserFriendlyTypes`` doesn't seem to notice
+the change, so Collage control panel doesn't display ``Collage`` as an allowed
+portal type. Patches are applied to ``enabledAlias`` and ``enabledType`` instead. 
 
