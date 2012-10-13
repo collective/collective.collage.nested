@@ -49,7 +49,7 @@ def test_suite():
         #ztc.ZopeDocFileSuite(
         #    'docs/vocabulary.txt', package='collective.collage.nested',
         #    test_class=base.FunctionalTestCase),
-            
+
         # Integration tests that use PloneTestCase
         ztc.ZopeDocFileSuite(
             'docs/browser.txt', package='collective.collage.nested',

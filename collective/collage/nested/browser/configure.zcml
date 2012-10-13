@@ -10,7 +10,7 @@
       permission="zope.Public"
       template="templates/nested_full.pt"
       layer="Products.Collage.interfaces.ICollageBrowserLayer"
-      /> 
+      />
 
   <browser:page
       name="content"
@@ -20,7 +20,7 @@
       template="templates/nested_content.pt"
       layer="Products.Collage.interfaces.ICollageBrowserLayer"
       />
-      
+
   <browser:resource
     name="nested-collage.css"
     file="./css/collage.css"

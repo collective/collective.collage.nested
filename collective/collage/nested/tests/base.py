@@ -88,7 +88,7 @@ class FunctionalTestCase(ptc.FunctionalTestCase):
         self.portal.portal_membership.addMember('contributor',
                                                 'secret',
                                                 roles, [])
-                                                
+
 class FunctionalTestCaseWithContent(FunctionalTestCase):
 
     class Session(dict):
@@ -112,7 +112,7 @@ class FunctionalTestCaseWithContent(FunctionalTestCase):
         ob.setExcludeFromNav(True)
         wtool.doActionFor(ob, 'publish')
         ni = ob
-             
+
         # Page (Document)
         _ = self.portal.invokeFactory('Document', 'doc')
         ob = getattr(self.portal, _)
@@ -134,7 +134,7 @@ class FunctionalTestCaseWithContent(FunctionalTestCase):
         # Row
         _ = collage.invokeFactory('CollageRow', '1')
         row = getattr(collage, _)
-        
+
         # Column and Alias for Page
         _ = row.invokeFactory('CollageColumn', '1')
         column = getattr(row, _)
@@ -151,7 +151,7 @@ class FunctionalTestCaseWithContent(FunctionalTestCase):
         alias2 = getattr(column, _)
         alias2.set_target(ni.UID())
         manager = IDynamicViewManager(alias2)
-        manager.setLayout('standard')  
+        manager.setLayout('standard')
 
         # Pre-build the outer Collage
         _ = self.portal.invokeFactory('Collage', 'outer-collage')
