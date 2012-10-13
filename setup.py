@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
+version = '1.1.dev0'
 
 setup(name='collective.collage.nested',
       version=version,
@@ -18,7 +18,7 @@ setup(name='collective.collage.nested',
       keywords='',
       author='Marcos F. Romero',
       author_email='marcos.romero {at} inter-cultura {dot} com',
-      url='http://svn.plone.org/svn/collective/Products.Collage/addons/collective.collage.nested/',
+      url='https://github.com/collective/collective.collage.nested',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', 'collective.collage'],

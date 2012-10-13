@@ -4,9 +4,11 @@ Changelog
 1.1 (unreleased)
 ----------------
 
+- Moved to https://github.com/collective/collective.collage.nested
 
 1.0 (2011-08-09)
 ----------------
+
 - i18n support
 - English and Spanish translation
 - Full layout now displays related items
